@@ -1,5 +1,8 @@
 # Qt的一些简单常用示例
 
+- [简体中文](README.md)
+- [English](README.en.md)
+
 ## 1. [Battery](Battery/)——电池；
 
 <table>
