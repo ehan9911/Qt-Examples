@@ -41,6 +41,10 @@
 
 ## [HttpClient](/HttpClient)- http client;
 
+## [ImageCarousel](ImageCarousel/)——simple image carousel;
+
+<div align=center><img src="ImageCarousel/picture/ImageCarousel.jpg"></div>
+
 ## [GridViewModel](/GridViewModel)——Adaptive palace map based on QListView;
 
 <div align=center><img src="GridViewModel/picture/GridView.png"></div>
@@ -61,7 +65,7 @@
 
 <div align=center><img src="NavigationProgressBar/picture/NavigationProgressBar.png"></div>
 
-## [PasswordLineEdit](PasswordLineEdit/)- password input box;
+## [PasswordLineEdit](PasswordLineEdit/)- Password input box;
 
 <table>
     <tr>
@@ -111,16 +115,16 @@ Another: simpler implementation:[Animated CheckBox](http://qtdebug.com/qtbook-an
 
 ## [Thread](Thread/)——Multithreading example, 6 ways of writing;
 
-## [TreeViewModel](TreeViewModel/)——Tree view (MVC), QtCreator source code;
+## [TreeViewModel](TreeViewModel/)——树形视图（MVC），QtCreator源码；
 
 <div align=center><img src="TreeViewModel/picture/TreeView.png"></div>  
 <div align=center><img src="TreeViewModel/picture/ListView.png"></div>
 
 ## [Validator](Validator/)——Enhanced IntValidator (QIntValidator) and DoubleValidator (QDoubleValidator)
 
-## [Scripts](Scripts/)--package script
+## [Scripts](Scripts/)- Packaging script
 
-1.  [macos](Scripts/macos/)—— macos general compilation and printing dmg package script (`python`/`dmgbuild`）；
+1.  [macos](Scripts/macos/)——macos general compilation and printing dmg package script (`python`/`dmgbuild`）；
 2.  [windows](Scripts/windows)——Windows general compilation and packaging installation script (Innosetup);
 
     1.  `Innosetup``signtool`
