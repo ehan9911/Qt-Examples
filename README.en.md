@@ -3,6 +3,8 @@
 -   [Simplified Chinese](README.md)
 -   [English](README.en.md)
 
+## [QT practical tips (update when you think of it) | Free Will (realchuan.github.io)](https://realchuan.github.io/2021/10/12/QT%E5%AE%9E%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7%EF%BC%88%E6%83%B3%E5%88%B0%E5%B0%B1%E6%9B%B4%E6%96%B0%EF%BC%89/)
+
 ## [Battery](Battery/)--Battery;
 
 <table>
@@ -11,6 +13,15 @@
         <td ><div align=center><img src="Battery/picture/HealthyBattery.png"></div></td>
     </tr>
 </table>
+
+## [Bootstrap](Bootstarp/)--Program boot self-start setting and detection;
+
+1.  Read and write registry under Windows (HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run) realizes self-starting at boot;
+2.  Copy the plist file to ~/Library/LaunchAgents/ under MacOS, and use the launchctl load/unload command to realize booting automatically;
+3.  Copy the .service and .timer files to ~/.config/systemd/user/ under Ubuntu, and use the systemctl --user enable/disable command to realize boot-up self-start;
+    1.  The systemctl command is used for the .timer file, and the .timer file is used to execute the .service file at regular intervals to prevent the qxcbconnection: could not connect to display error from appearing after the graphical interface is started;
+    2.  For .service files that do not need to be executed regularly, you can directly use the systemctl --user enable/disable command to realize boot-up self-starting;
+    3.  You can also copy the .desktop file under /usr/share/Application/ to ~/.config/autostart/ to realize automatic startup after booting (unverified);
 
 ## [BubbleWindow](BubbleWindow/)——A bubble dialog box, which can also be used as a tooltip (ToolTip);
 
@@ -65,7 +76,7 @@
 
 <div align=center><img src="NavigationProgressBar/picture/NavigationProgressBar.png"></div>
 
-## [PasswordLineEdit](PasswordLineEdit/)- Password input box;
+## [PasswordLineEdit](PasswordLineEdit/)- password input box;
 
 <table>
     <tr>
@@ -115,7 +126,7 @@ Another: simpler implementation:[Animated CheckBox](http://qtdebug.com/qtbook-an
 
 ## [Thread](Thread/)——Multithreading example, 6 ways of writing;
 
-## [TreeViewModel](TreeViewModel/)——树形视图（MVC），QtCreator源码；
+## [TreeViewModel](TreeViewModel/)——Tree view (MVC), QtCreator source code;
 
 <div align=center><img src="TreeViewModel/picture/TreeView.png"></div>  
 <div align=center><img src="TreeViewModel/picture/ListView.png"></div>
@@ -124,7 +135,7 @@ Another: simpler implementation:[Animated CheckBox](http://qtdebug.com/qtbook-an
 
 ## [Scripts](Scripts/)- Packaging script
 
-1.  [macos](Scripts/macos/)——macos general compilation and printing dmg package script (`python`/`dmgbuild`）；
+1.  [macos](Scripts/macos/)—— macos general compilation and printing dmg package script (`python`/`dmgbuild`）；
 2.  [windows](Scripts/windows)——Windows general compilation and packaging installation script (Innosetup);
 
     1.  `Innosetup``signtool`
