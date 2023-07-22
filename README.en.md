@@ -16,7 +16,7 @@
 
 ## [Bootstrap](Bootstarp/)--Program boot self-start setting and detection;
 
-1.  Read and write registry under Windows (HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run) realizes self-starting at boot;
+1.  Read and write registry under Windows (HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run) realizes booting self-starting;
 2.  Copy the plist file to ~/Library/LaunchAgents/ under MacOS, and use the launchctl load/unload command to realize booting automatically;
 3.  Copy the .service and .timer files to ~/.config/systemd/user/ under Ubuntu, and use the systemctl --user enable/disable command to realize boot-up self-start;
     1.  The systemctl command is used for the .timer file, and the .timer file is used to execute the .service file at regular intervals to prevent the qxcbconnection: could not connect to display error from appearing after the graphical interface is started;
@@ -44,7 +44,7 @@
 
 <div align=center><img src="DashBoard/picture/DashBoard.png"></div>
 
-## [FlowLayout](FlowLayout/)——Flow layout, from QT sample Flow Layout Example;
+## [FlowLayout](FlowLayout/)——流式布局，来自QT示例Flow Layout Example；
 
 <div align=center><img src="FlowLayout/picture/FlowLayout.png"></div>
 
@@ -62,7 +62,7 @@
 
 ## [LogAsynchronous](LogAsynchronous/)——Asynchronous log, open up a thread to write logs to the file, and separate the front and back ends.
 
-1.  Log file name: application name (appname). Time (time, accurate to seconds). Host hostname. Process ID (Tid).log (.count). If a single log written in a day is about 1G, the suffix will be automatically added (.1,.2.3..., and so on) Create a new log file to write, and rollFile will still be rolled at 0:00 every day;
+1.  Log file name: application name (appname). Time (time, accurate to seconds). Host hostname. Process ID (Tid).log (.count). If a single log written in a day is about 1G, it will automatically add a suffix (.1,.2.3..., and so on) to create a new log file to write, and rollFile will still be rolled at 0:00 every day;
     1.  Normal file name: LogAsynchronous.2020-04-26-20-29-03.Youth.11828.log;
     2.  The log written on that day is close to 1G, and the new file name is: LogAsynchronous.2020-04-26-20-38-55.Youth.11828.log.1;
 2.  Log format: time (time, accurate to milliseconds). Thread ID (Pid). Log level (debug). Print information (msg). File (File). Line number (Line).
@@ -96,6 +96,8 @@
 ## [ReactorServer](ReactorServer/)——Multi-thread server, Reactor mode (Echo);
 
 ## [SimpleUdp](SimpleUdp/)——Simple UDP example, broadcast and receive;
+
+## [ShowInMyComputer](ShowInMyComputer/)- Show current application in My Computer;
 
 Firewall whitelist.
 
