@@ -30,7 +30,7 @@ jobs:
           - macos-latest
           - ubuntu-latest
         qt_ver: 
-          - 6.5.0
+          - 6.5.2
 
     steps:
       - name: Install Qt
@@ -42,10 +42,13 @@ jobs:
           cache: 'true'
       - name: ubuntu install GL library
         if: startsWith(matrix.os, 'ubuntu')
-        run: sudo apt-get install -y build-essential libgl1-mesa-dev
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libgl1-mesa-dev
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
+
       - name: msvc-build
         if: startsWith(matrix.os, 'windows')
         shell: cmd
@@ -55,6 +58,7 @@ jobs:
           nmake
       - name: build macos or ubuntu
         if: startsWith(matrix.os, 'macos') || startsWith(matrix.os, 'ubuntu')
+        shell: bash
         run: |
           qmake
           make -j4
