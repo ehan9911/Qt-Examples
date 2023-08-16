@@ -16,7 +16,7 @@
 
 ## [Bootstrap](Bootstarp/)--Program boot self-start setting and detection;
 
-1.  Read and write registry under Windows (HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run) realizes booting self-starting;
+1.  Read and write registry under Windows (HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run) realizes self-starting at boot;
 2.  Copy the plist file to ~/Library/LaunchAgents/ under MacOS, and use the launchctl load/unload command to realize booting automatically;
 3.  Copy the .service and .timer files to ~/.config/systemd/user/ under Ubuntu, and use the systemctl --user enable/disable command to realize boot-up self-start;
     1.  The systemctl command is used for the .timer file, and the .timer file is used to execute the .service file at regular intervals to prevent the qxcbconnection: could not connect to display error from appearing after the graphical interface is started;
@@ -44,7 +44,7 @@
 
 <div align=center><img src="DashBoard/picture/DashBoard.png"></div>
 
-## [FlowLayout](FlowLayout/)——流式布局，来自QT示例Flow Layout Example；
+## [FlowLayout](FlowLayout/)——Flow layout, from QT sample Flow Layout Example;
 
 <div align=center><img src="FlowLayout/picture/FlowLayout.png"></div>
 
@@ -62,7 +62,7 @@
 
 ## [LogAsynchronous](LogAsynchronous/)——Asynchronous log, open up a thread to write logs to the file, and separate the front and back ends.
 
-1.  Log file name: application name (appname). Time (time, accurate to seconds). Host hostname. Process ID (Tid).log (.count). If a single log written in a day is about 1G, it will automatically add a suffix (.1,.2.3..., and so on) to create a new log file to write, and rollFile will still be rolled at 0:00 every day;
+1.  Log file name: application name (appname). Time (time, accurate to seconds). Host hostname. Process ID (Tid).log (.count). If a single log written in a day is about 1G, the suffix will be automatically added (.1,.2.3..., and so on) Create a new log file to write, and rollFile will still be rolled at 0:00 every day;
     1.  Normal file name: LogAsynchronous.2020-04-26-20-29-03.Youth.11828.log;
     2.  The log written on that day is close to 1G, and the new file name is: LogAsynchronous.2020-04-26-20-38-55.Youth.11828.log.1;
 2.  Log format: time (time, accurate to milliseconds). Thread ID (Pid). Log level (debug). Print information (msg). File (File). Line number (Line).
@@ -126,7 +126,7 @@ Another: simpler implementation:[Animated CheckBox](http://qtdebug.com/qtbook-an
 
 <div align=center><img src="TableViewModel/picture/TabViewModelDelegate.jpg"></div>
 
-## [Thread](Thread/)——Multithreading example, 6 ways of writing;
+## [Thread](Thread/)——Multi-thread example, 6 ways of writing;
 
 ## [TreeViewModel](TreeViewModel/)——Tree view (MVC), QtCreator source code;
 
@@ -135,11 +135,12 @@ Another: simpler implementation:[Animated CheckBox](http://qtdebug.com/qtbook-an
 
 ## [Validator](Validator/)——Enhanced IntValidator (QIntValidator) and DoubleValidator (QDoubleValidator)
 
-## [Scripts](Scripts/)- Packaging script
+## [packaging](packaging/)- packaging script;
 
-1.  [macos](Scripts/macos/)—— macos general compilation and printing dmg package script (`python`/`dmgbuild`）；
-2.  [windows](Scripts/windows)——Windows general compilation and packaging installation script (Innosetup);
+1.  [macos](packaging/macos/)——macos qmake compiles and packages the dmg package script (`python`/`appdmg`）；
+2.  [ubuntu](packaging/ubuntu/)——ubuntu qmake compiles and packages the AppImage/deb package script (`linuxdeployqt-continuous-x86_64.AppImage`/`dpkg-deb`）；
+3.  [windows](packaging/windows/)——windows qmake compiles, packages and installs scripts (`Innosetup`）；
 
     1.  `Innosetup``signtool`
 
-            sha256="C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.18362.0\\x86\\signtool.exe" sign /f C:\\work\\certificate\\xxxxx.pfx /p password /fd SHA256 /tr http://timestamp.digicert.com/scripts/timestamp.dll /td SHA256 $f
+            sha256="C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.18362.0\\x86\\signtool.exe" sign /f C:\\certificate\\certificate.pfx /p password /fd SHA256 /tr http://timestamp.digicert.com/scripts/timestamp.dll /td SHA256 $f
