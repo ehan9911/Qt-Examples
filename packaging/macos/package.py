@@ -91,4 +91,4 @@ utils.upload_file(
 # 输出如下：
 # /Applications/MyApp.app: accepted
 # source=Notarized Developer ID
-# origin=*********** (SZK7KDMBW5)
+# origin=*********** (******)
