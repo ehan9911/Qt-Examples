@@ -135,13 +135,12 @@
 
 ## [Validator](Validator/)——加强版IntValidator（QIntValidator）和DoubleValidator（QDoubleValidator）
 
-## [Scripts](Scripts/)——打包脚本
-
-1. [macos](Scripts/macos/)——macos 通用编译打dmg包脚本（`python`/`dmgbuild`）；
-2. [widnows](Scripts/windows)——windows 通用编译打包安装脚本（Innosetup）；
-
+## [packaging](packaging/)——打包脚本；
+1. [macos](packaging/macos/)——macos qmake编译、打包dmg包脚本（`python`/`appdmg`）；
+2. [ubuntu](packaging/ubuntu/)——ubuntu qmake编译、打包AppImage/deb包脚本（`linuxdeployqt-continuous-x86_64.AppImage`/`dpkg-deb`）；
+3. [windows](packaging/windows/)——windows qmake编译、打包安装脚本（`Innosetup`）；
    1. `Innosetup` `signtool`
 
       ```
-      sha256="C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.18362.0\\x86\\signtool.exe" sign /f C:\\work\\certificate\\xxxxx.pfx /p password /fd SHA256 /tr http://timestamp.digicert.com/scripts/timestamp.dll /td SHA256 $f
+      sha256="C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.18362.0\\x86\\signtool.exe" sign /f C:\\certificate\\certificate.pfx /p password /fd SHA256 /tr http://timestamp.digicert.com/scripts/timestamp.dll /td SHA256 $f
       ```

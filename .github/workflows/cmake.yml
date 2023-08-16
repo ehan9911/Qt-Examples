@@ -3,20 +3,20 @@ name: CMake Build
 on: 
   push:
     paths-ignore: # 下列文件的变更不触发部署，可以自行添加
-        - 'picture'
+        - '**/picture/**'
+        - 'packaging/**'
         - '.clang-format'
         - '.gitignore'
         - 'LICENSE'
         - 'README*'
-        - 'Scripts'
   pull_request:
     paths-ignore: # 下列文件的变更不触发部署，可以自行添加
-        - 'picture'
+        - '**/picture/**'
+        - 'packaging/**'
         - '.clang-format'
         - '.gitignore'
         - 'LICENSE'
         - 'README*'
-        - 'Scripts'
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
         qt_ver: 
           - 6.5.2
         build_type:
-          - "Release"
+          - "RelWithDebInfo"
         generators:
           - "Ninja"
 
